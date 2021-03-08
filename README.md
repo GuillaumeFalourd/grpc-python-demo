@@ -1,4 +1,4 @@
-# gRPC Python
+# gRPC (Google Remote Procedure Call) Python
 
 [This code's has been inspired from from the grpc.io site.](https://grpc.io/docs/languages/python/quickstart)
 
