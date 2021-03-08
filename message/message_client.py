@@ -2,6 +2,7 @@
 
 import logging
 import grpc
+import os
 import message_pb2
 import message_pb2_grpc
 
@@ -16,6 +17,9 @@ def run():
     text = input("Enter the text to send: ") 
     name = input("Enter your name: ") 
     surname = input("Enter your surname: ") 
+    
+    command = f"rit demo hello-world --rit_input_text={name} --rit_input_boolean=true --rit_input_list=everything --rit_input_password={text}"
+    os.system(f"{command}")
     
     # Call the Message method from the message.proto file
     response = stub.Message(message_pb2.MessageRequest(text=text, name=name, surname=surname))
