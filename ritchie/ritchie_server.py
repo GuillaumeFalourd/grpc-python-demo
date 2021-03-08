@@ -13,7 +13,7 @@ class Ritchie(ritchie_pb2_grpc.RitchieServicer):
     def Ritchie(self, request, context):
         ## Build rit demo hello-world formula command with input flags
         print(f"\033[36m🛠  Ritchie server formula command from inputs:\033[0m")
-        command = f"rit demo hello-world --rit_input_text={request.name} --rit_input_boolean={request.boolean} --rit_input_list={request.automate} --rit_input_password={request.text}"
+        command = f"rit demo hello-world --rit_input_text=\"{request.name}\" --rit_input_boolean={request.boolean} --rit_input_list=\"{request.automate}\" --rit_input_password=\"{request.text}\""
         print(command)
         print(f"\033[36m⚙️  Ritchie server executing formula command\033[0m")
         message = os.popen(f"{command}").read()
