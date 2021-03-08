@@ -6,7 +6,7 @@
 
 ### Message
 
-#### Execution
+#### Message Execution
 
 From the `python/message` directory:
 
@@ -24,7 +24,7 @@ python3 message_client.py
 
 ### Ritchie
 
-#### Premisse: 
+#### Ritchie Premisse
 
 - [Ritchie CLI](https://docs.ritchiecli.io/getting-started/install-cli) installed locally
 - ritchie-formulas-demo Github repository imported:
@@ -33,7 +33,7 @@ python3 message_client.py
 rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
 ```
 
-#### Execution
+#### Ritchie Execution
 
 From the `python/ritchie` directory:
 
@@ -51,7 +51,7 @@ python3 ritchie_client.py
 
 ## Demo
 
-### Message
+### Message Sample
 
 #### Message inputs and response (client)
 
@@ -61,7 +61,7 @@ python3 ritchie_client.py
 
 ![Server](/docs/img/message_server.png)
 
-### Ritchie
+### Ritchie Sample
 
 #### Ritchie inputs and response (client)
 
