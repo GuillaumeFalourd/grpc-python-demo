@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n\030io.grpc.examples.ritchieB\014RitchieProtoP\001\242\002\003RIT',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\rritchie.proto\x12\x07ritchie\"!\n\x0eRitchieRequest\x12\x0f\n\x07\x63ommand\x18\x01 \x01(\t\"\x1f\n\x0cRitchieReply\x12\x0f\n\x07message\x18\x01 \x01(\t2F\n\x07Ritchie\x12;\n\x07Ritchie\x12\x17.ritchie.RitchieRequest\x1a\x15.ritchie.RitchieReply\"\x00\x42\x30\n\x18io.grpc.examples.ritchieB\x0cRitchieProtoP\x01\xa2\x02\x03RITb\x06proto3'
+  serialized_pb=b'\n\rritchie.proto\x12\x07ritchie\"O\n\x0eRitchieRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07\x62oolean\x18\x02 \x01(\t\x12\x10\n\x08\x61utomate\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\"\x1f\n\x0cRitchieReply\x12\x0f\n\x07message\x18\x01 \x01(\t2F\n\x07Ritchie\x12;\n\x07Ritchie\x12\x17.ritchie.RitchieRequest\x1a\x15.ritchie.RitchieReply\"\x00\x42\x30\n\x18io.grpc.examples.ritchieB\x0cRitchieProtoP\x01\xa2\x02\x03RITb\x06proto3'
 )
 
 
@@ -34,8 +34,29 @@ _RITCHIEREQUEST = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='command', full_name='ritchie.RitchieRequest.command', index=0,
+      name='name', full_name='ritchie.RitchieRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='boolean', full_name='ritchie.RitchieRequest.boolean', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='automate', full_name='ritchie.RitchieRequest.automate', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='text', full_name='ritchie.RitchieRequest.text', index=3,
+      number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -53,7 +74,7 @@ _RITCHIEREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=26,
-  serialized_end=59,
+  serialized_end=105,
 )
 
 
@@ -84,8 +105,8 @@ _RITCHIEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61,
-  serialized_end=92,
+  serialized_start=107,
+  serialized_end=138,
 )
 
 DESCRIPTOR.message_types_by_name['RitchieRequest'] = _RITCHIEREQUEST
@@ -116,8 +137,8 @@ _RITCHIE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=94,
-  serialized_end=164,
+  serialized_start=140,
+  serialized_end=210,
   methods=[
   _descriptor.MethodDescriptor(
     name='Ritchie',

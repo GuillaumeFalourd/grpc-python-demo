@@ -36,12 +36,9 @@ def run():
     
     text = input("Type some text: ") 
     
-    ## Build rit demo hello-world formula command with input flags
-    command = f"rit demo hello-world --rit_input_text={name} --rit_input_boolean={boolean} --rit_input_list={automate} --rit_input_password={text}"
-    
-    # Call the Ritchie method from the ritchie.proto file
-    response = stub.Ritchie(ritchie_pb2.RitchieRequest(command=command))
-    print("\n\033[36m💡 Ritchie formula execution returned by server:\033[0m\n" + response.message)
+    # Call the Ritchie method from the ritchie.proto file with inputs
+    response = stub.Ritchie(ritchie_pb2.RitchieRequest(name=name, boolean=boolean, automate=automate, text=text))
+    print("\n\033[36m💡 Ritchie formula execution returned by server:\033[0m\n\n" + response.message)
 
 
 if __name__ == '__main__':
