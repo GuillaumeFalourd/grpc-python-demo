@@ -14,7 +14,10 @@ service Ritchie {
 
 // The request message
 message RitchieRequest {
-    string command = 1;
+    string name = 1;
+    string boolean = 2;
+    string automate = 3;
+    string text = 4;
 }
 
 // The response message
