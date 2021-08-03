@@ -10,8 +10,8 @@ import message_pb2_grpc
 class Message(message_pb2_grpc.MessageServicer):
 
     def Message(self, request, context):
-        print(f"Message server sent a message from {request.name} {request.surname}")
-        return message_pb2.MessageReply(message=f'{request.text} from {request.name} {request.surname}')
+        print(f"Client sent a message from {request.name} {request.surname}")
+        return message_pb2.MessageReply(message=f'I received the message \"{request.text}\" from {request.name} {request.surname}')
 
 
 def serve():

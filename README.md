@@ -8,7 +8,7 @@
 
 #### Message Execution
 
-From the `python/message` directory:
+From the `message` directory:
 
 Run the server:
 
